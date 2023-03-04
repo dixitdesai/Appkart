@@ -83,7 +83,7 @@ a {
 }
 
 .nav__search-input input{
-    padding: 6px 10px;
+    padding: 6.5px 10px;
     width: 100%;
     border: none;
     outline: none;
@@ -102,7 +102,7 @@ a {
     width: 44px;
     border-radius: 2px;
     cursor: pointer;
-    padding: 4px 12px 2px 8px;
+    padding: 4px 12px 3px 8px;
     margin-left: -1px;
 }
 
@@ -158,6 +158,8 @@ a {
     display: block;
     margin-top: 0; /* remove the gap so it doesn't close */
     /* position: absolute; */
+    transform: scale(1.05);
+    
 }
 
 .dropdown-menu {
@@ -216,7 +218,7 @@ a {
 .menu__items {
     display: flex;
     column-gap: 5rem;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     font-size: 1.4rem;
     font-weight: 500;
@@ -224,6 +226,8 @@ a {
 
 .menu__item {
     cursor: pointer !important;
+    transition: transform 0.5s ease-in-out ;
+    
 }
 
 .menu__item img {
@@ -265,8 +269,13 @@ a {
 
 @media screen and (max-width: 980px) {
     .menu__items {
-        flex-wrap: wrap;
-        row-gap: 0;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 965px) {
+    .menu__items {
+        justify-content: center;
     }
 }
 
